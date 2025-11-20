@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Custom Backend Theme - Webclient Templates -->
+    
+    <!-- Override the webclient layout to inject custom theme elements -->
+    <template id="webclient_bootstrap" inherit_id="web.webclient_bootstrap" name="Custom Theme Webclient">
+        <!-- Add custom theme class to body -->
+        <xpath expr="//body" position="attributes">
+            <attribute name="class" add="custom_backend_theme" separator=" "/>
+        </xpath>
+    </template>
+    
+    <!-- Customize the main menu structure if needed -->
+    <template id="menu_template" inherit_id="web.menu" name="Custom Theme Menu">
+        <!-- Add custom branding or logo area -->
+        <xpath expr="//nav[hasclass('o_main_navbar')]" position="inside">
+            <div class="o_menu_brand_custom">
+                <!-- Custom logo or branding can be added here -->
+            </div>
+        </xpath>
+    </template>
+    
+    <!-- Enhance the navbar -->
+    <template id="navbar_template" inherit_id="web._assets_primary_variables" name="Custom Theme Navbar Variables" priority="99">
+        <!-- This template can be used to override CSS variables if needed -->
+    </template>
+    
+</odoo>

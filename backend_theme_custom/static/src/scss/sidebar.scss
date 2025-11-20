@@ -1,0 +1,98 @@
+// ==========================================================================
+// Sidebar Styling
+// ==========================================================================
+
+// Sidebar Container
+.o_action_manager {
+    .o_navbar_apps_menu {
+        background-color: $o-sidebar-bg;
+        
+        .dropdown-menu {
+            background-color: $o-sidebar-bg;
+            border: none;
+            box-shadow: $o-shadow-lg;
+        }
+    }
+}
+
+// Main Navigation Sidebar
+.o_main_navbar {
+    background-color: $o-sidebar-bg;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    
+    .o_menu_brand {
+        background-color: darken($o-sidebar-bg, 5%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: $o-spacing-md;
+        
+        img {
+            max-height: 32px;
+        }
+    }
+    
+    .o_menu_sections {
+        .o_nav_entry {
+            color: rgba(255, 255, 255, 0.8);
+            padding: $o-spacing-sm $o-spacing-md;
+            margin: $o-spacing-xs $o-spacing-sm;
+            border-radius: $o-border-radius;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                background-color: $o-sidebar-item-hover;
+                color: $o-text-light;
+                transform: translateX(4px);
+            }
+            
+            &.active,
+            &.focus {
+                background-color: $o-sidebar-item-active;
+                color: $o-text-light;
+                font-weight: $o-font-weight-medium;
+            }
+            
+            i {
+                margin-right: $o-spacing-sm;
+                font-size: $o-font-size-lg;
+            }
+        }
+    }
+}
+
+// Sidebar Menu Items
+.o_menu_systray,
+.o_menu_apps {
+    .dropdown-item {
+        padding: $o-spacing-sm $o-spacing-md;
+        transition: background-color 0.2s ease;
+        
+        &:hover {
+            background-color: $o-sidebar-item-hover;
+            color: $o-text-light;
+        }
+        
+        &.active {
+            background-color: $o-sidebar-item-active;
+            color: $o-text-light;
+        }
+    }
+}
+
+// Collapsible Sidebar
+.o_action_manager.o_home_menu_background {
+    .o_main_navbar {
+        width: $o-sidebar-width;
+        
+        &.o_navbar_apps_menu {
+            transition: width 0.3s ease;
+            
+            &.collapsed {
+                width: 60px;
+                
+                .o_menu_sections .o_nav_entry span {
+                    display: none;
+                }
+            }
+        }
+    }
+}

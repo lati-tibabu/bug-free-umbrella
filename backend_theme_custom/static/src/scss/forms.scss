@@ -1,0 +1,231 @@
+// ==========================================================================
+// Form View Styling
+// ==========================================================================
+
+// Form Container
+.o_form_view {
+    background-color: $o-bg-white;
+    
+    .o_form_sheet_bg {
+        background-color: $o-bg-light;
+        padding: $o-spacing-lg;
+    }
+    
+    .o_form_sheet {
+        background-color: $o-bg-white;
+        border-radius: $o-border-radius;
+        box-shadow: $o-shadow-sm;
+        padding: $o-spacing-xl;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+// Form Status Bar
+.o_form_statusbar {
+    background-color: $o-bg-light;
+    border-bottom: 1px solid $o-border-color;
+    padding: $o-spacing-sm $o-spacing-md;
+    
+    .o_statusbar_status {
+        .o_arrow_button {
+            border-color: $o-border-color;
+            background-color: $o-bg-white;
+            color: $o-text-secondary;
+            padding: $o-spacing-xs $o-spacing-md;
+            transition: all 0.2s ease;
+            
+            &.btn-primary {
+                background-color: $o-brand-success;
+                border-color: $o-brand-success;
+                color: $o-text-light;
+                font-weight: $o-font-weight-medium;
+            }
+            
+            &:hover {
+                background-color: $o-brand-secondary;
+                border-color: $o-brand-secondary;
+                color: $o-text-light;
+            }
+        }
+    }
+}
+
+// Form Labels and Fields
+.o_form_label {
+    color: $o-form-label-color;
+    font-weight: $o-font-weight-medium;
+    margin-bottom: $o-spacing-xs;
+    
+    &.o_form_label_empty {
+        opacity: 0.6;
+    }
+}
+
+// Input Fields
+.o_field_widget {
+    input,
+    textarea,
+    select {
+        border: 1px solid $o-form-input-border;
+        border-radius: $o-border-radius;
+        padding: $o-spacing-sm;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        
+        &:focus {
+            border-color: $o-form-input-focus;
+            box-shadow: 0 0 0 3px rgba($o-form-input-focus, 0.1);
+            outline: none;
+        }
+        
+        &:disabled,
+        &[readonly] {
+            background-color: $o-bg-light;
+            cursor: not-allowed;
+        }
+    }
+    
+    // Date and Datetime pickers
+    &.o_field_date,
+    &.o_field_datetime {
+        .o_datepicker_input {
+            border: 1px solid $o-form-input-border;
+            border-radius: $o-border-radius;
+            
+            &:focus {
+                border-color: $o-form-input-focus;
+                box-shadow: 0 0 0 3px rgba($o-form-input-focus, 0.1);
+            }
+        }
+    }
+    
+    // Many2one fields
+    &.o_field_many2one {
+        .o_input_dropdown {
+            input {
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            
+            .o_dropdown_button {
+                border: 1px solid $o-form-input-border;
+                border-left: none;
+                border-top-right-radius: $o-border-radius;
+                border-bottom-right-radius: $o-border-radius;
+                background-color: $o-bg-light;
+                transition: background-color 0.2s ease;
+                
+                &:hover {
+                    background-color: darken($o-bg-light, 5%);
+                }
+            }
+        }
+    }
+    
+    // Selection fields
+    &.o_field_selection {
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 30px;
+        }
+    }
+    
+    // Boolean fields (checkboxes)
+    &.o_field_boolean {
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            
+            &:checked {
+                accent-color: $o-brand-success;
+            }
+        }
+    }
+    
+    // Tag fields
+    &.o_field_many2many_tags {
+        .badge {
+            background-color: $o-brand-secondary;
+            color: $o-text-light;
+            border-radius: $o-border-radius;
+            padding: $o-spacing-xs $o-spacing-sm;
+            margin-right: $o-spacing-xs;
+            font-weight: $o-font-weight-normal;
+            
+            .o_delete {
+                margin-left: $o-spacing-xs;
+                cursor: pointer;
+                opacity: 0.8;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Form Groups and Sections
+.o_group {
+    .o_form_label {
+        min-width: 150px;
+    }
+}
+
+.o_horizontal_separator {
+    border-top: 2px solid $o-border-color;
+    margin: $o-spacing-lg 0;
+    font-weight: $o-font-weight-bold;
+    color: $o-text-primary;
+    padding-bottom: $o-spacing-sm;
+}
+
+// Notebook (Tabs)
+.o_notebook {
+    .nav-tabs {
+        border-bottom: 2px solid $o-border-color;
+        
+        .nav-link {
+            color: $o-text-secondary;
+            border: none;
+            border-bottom: 2px solid transparent;
+            padding: $o-spacing-sm $o-spacing-md;
+            margin-bottom: -2px;
+            transition: all 0.2s ease;
+            
+            &:hover {
+                color: $o-brand-secondary;
+                border-bottom-color: lighten($o-brand-secondary, 20%);
+            }
+            
+            &.active {
+                color: $o-brand-secondary;
+                border-bottom-color: $o-brand-secondary;
+                font-weight: $o-font-weight-medium;
+            }
+        }
+    }
+    
+    .tab-content {
+        padding: $o-spacing-md 0;
+    }
+}
+
+// Chatter (Messages and Activities)
+.o_FormRenderer_chatterContainer {
+    background-color: $o-bg-light;
+    border-top: 1px solid $o-border-color;
+    padding: $o-spacing-md;
+    
+    .o_chatter_topbar {
+        background-color: $o-bg-white;
+        border-radius: $o-border-radius;
+        padding: $o-spacing-sm;
+        margin-bottom: $o-spacing-md;
+    }
+}

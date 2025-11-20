@@ -1,0 +1,182 @@
+// ==========================================================================
+// Button Styling
+// ==========================================================================
+
+// Base Button Styles
+.btn {
+    border-radius: $o-btn-border-radius;
+    padding: $o-btn-padding-y $o-btn-padding-x;
+    font-weight: $o-font-weight-medium;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: $o-shadow-sm;
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+    
+    i {
+        margin-right: $o-spacing-xs;
+    }
+}
+
+// Primary Button
+.btn-primary {
+    background-color: $o-brand-primary;
+    border-color: $o-brand-primary;
+    color: $o-text-light;
+    
+    &:hover,
+    &:focus {
+        background-color: darken($o-brand-primary, 10%);
+        border-color: darken($o-brand-primary, 10%);
+        color: $o-text-light;
+    }
+    
+    &:active {
+        background-color: darken($o-brand-primary, 15%);
+        border-color: darken($o-brand-primary, 15%);
+    }
+}
+
+// Secondary Button
+.btn-secondary {
+    background-color: $o-brand-secondary;
+    border-color: $o-brand-secondary;
+    color: $o-text-light;
+    
+    &:hover,
+    &:focus {
+        background-color: darken($o-brand-secondary, 10%);
+        border-color: darken($o-brand-secondary, 10%);
+        color: $o-text-light;
+    }
+    
+    &:active {
+        background-color: darken($o-brand-secondary, 15%);
+        border-color: darken($o-brand-secondary, 15%);
+    }
+}
+
+// Success Button
+.btn-success {
+    background-color: $o-brand-success;
+    border-color: $o-brand-success;
+    color: $o-text-light;
+    
+    &:hover,
+    &:focus {
+        background-color: darken($o-brand-success, 10%);
+        border-color: darken($o-brand-success, 10%);
+        color: $o-text-light;
+    }
+}
+
+// Warning Button
+.btn-warning {
+    background-color: $o-brand-warning;
+    border-color: $o-brand-warning;
+    color: $o-text-light;
+    
+    &:hover,
+    &:focus {
+        background-color: darken($o-brand-warning, 10%);
+        border-color: darken($o-brand-warning, 10%);
+        color: $o-text-light;
+    }
+}
+
+// Danger Button
+.btn-danger {
+    background-color: $o-brand-danger;
+    border-color: $o-brand-danger;
+    color: $o-text-light;
+    
+    &:hover,
+    &:focus {
+        background-color: darken($o-brand-danger, 10%);
+        border-color: darken($o-brand-danger, 10%);
+        color: $o-text-light;
+    }
+}
+
+// Link Button
+.btn-link {
+    color: $o-brand-secondary;
+    text-decoration: none;
+    
+    &:hover {
+        color: darken($o-brand-secondary, 10%);
+        text-decoration: underline;
+    }
+}
+
+// Outline Buttons
+.btn-outline-primary {
+    color: $o-brand-primary;
+    border-color: $o-brand-primary;
+    
+    &:hover {
+        background-color: $o-brand-primary;
+        color: $o-text-light;
+    }
+}
+
+.btn-outline-secondary {
+    color: $o-brand-secondary;
+    border-color: $o-brand-secondary;
+    
+    &:hover {
+        background-color: $o-brand-secondary;
+        color: $o-text-light;
+    }
+}
+
+// Button Groups
+.btn-group {
+    .btn {
+        border-radius: 0;
+        
+        &:first-child {
+            border-top-left-radius: $o-btn-border-radius;
+            border-bottom-left-radius: $o-btn-border-radius;
+        }
+        
+        &:last-child {
+            border-top-right-radius: $o-btn-border-radius;
+            border-bottom-right-radius: $o-btn-border-radius;
+        }
+    }
+}
+
+// Icon Buttons
+.o_icon_button,
+.btn-icon {
+    padding: $o-spacing-sm;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+    i {
+        margin: 0;
+    }
+}
+
+// Small Buttons
+.btn-sm {
+    padding: 6px 12px;
+    font-size: $o-font-size-sm;
+}
+
+// Large Buttons
+.btn-lg {
+    padding: 12px 24px;
+    font-size: $o-font-size-lg;
+}
