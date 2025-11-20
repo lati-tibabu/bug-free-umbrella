@@ -1,0 +1,120 @@
+// ==========================================================================
+// Navbar Styling
+// ==========================================================================
+
+// Top Navigation Bar
+.o_navbar {
+    background-color: $o-navbar-bg;
+    height: $o-navbar-height;
+    box-shadow: $o-shadow-sm;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 $o-spacing-md;
+    
+    .o_navbar_apps_menu {
+        .dropdown-toggle {
+            color: $o-navbar-text;
+            font-weight: $o-font-weight-medium;
+            padding: $o-spacing-sm $o-spacing-md;
+            border-radius: $o-border-radius;
+            transition: background-color 0.2s ease;
+            
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            
+            i {
+                margin-right: $o-spacing-xs;
+            }
+        }
+    }
+    
+    // Breadcrumb
+    .o_menu_brand,
+    .breadcrumb {
+        color: $o-navbar-text;
+        
+        .breadcrumb-item {
+            color: rgba(255, 255, 255, 0.8);
+            
+            &.active {
+                color: $o-navbar-text;
+                font-weight: $o-font-weight-medium;
+            }
+            
+            a {
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+                transition: color 0.2s ease;
+                
+                &:hover {
+                    color: $o-navbar-text;
+                }
+            }
+        }
+    }
+    
+    // Search Bar
+    .o_searchview {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: $o-border-radius;
+        
+        input {
+            color: $o-navbar-text;
+            
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+        
+        .o_searchview_facet {
+            background-color: $o-brand-secondary;
+            color: $o-text-light;
+            border-radius: $o-border-radius;
+            padding: $o-spacing-xs $o-spacing-sm;
+        }
+    }
+    
+    // System Tray
+    .o_menu_systray {
+        .dropdown-toggle {
+            color: $o-navbar-text;
+            padding: $o-spacing-sm;
+            border-radius: $o-border-radius;
+            transition: background-color 0.2s ease;
+            
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            
+            .o_notification_counter {
+                background-color: $o-brand-danger;
+                color: $o-text-light;
+                border-radius: 50%;
+                font-size: $o-font-size-sm;
+                min-width: 18px;
+                height: 18px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+// Sub-header / Control Panel
+.o_control_panel {
+    background-color: $o-bg-white;
+    border-bottom: 1px solid $o-border-color;
+    padding: $o-spacing-md;
+    
+    .breadcrumb {
+        margin-bottom: 0;
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    .o_cp_buttons {
+        .btn {
+            margin-left: $o-spacing-xs;
+        }
+    }
+}

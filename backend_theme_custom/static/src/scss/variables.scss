@@ -1,0 +1,74 @@
+// ==========================================================================
+// Custom Backend Theme Variables
+// ==========================================================================
+
+// Primary Color Scheme
+$o-brand-primary: #2C3E50 !default;
+$o-brand-secondary: #3498DB !default;
+$o-brand-accent: #E74C3C !default;
+$o-brand-success: #27AE60 !default;
+$o-brand-warning: #F39C12 !default;
+$o-brand-danger: #E74C3C !default;
+$o-brand-info: #3498DB !default;
+
+// Background Colors
+$o-bg-light: #ECF0F1 !default;
+$o-bg-dark: #34495E !default;
+$o-bg-white: #FFFFFF !default;
+$o-bg-sidebar: #2C3E50 !default;
+$o-bg-navbar: #34495E !default;
+
+// Text Colors
+$o-text-primary: #2C3E50 !default;
+$o-text-secondary: #7F8C8D !default;
+$o-text-muted: #95A5A6 !default;
+$o-text-light: #FFFFFF !default;
+
+// Border and Shadow
+$o-border-color: #BDC3C7 !default;
+$o-border-radius: 4px !default;
+$o-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1) !default;
+$o-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15) !default;
+$o-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2) !default;
+
+// Spacing
+$o-spacing-xs: 4px !default;
+$o-spacing-sm: 8px !default;
+$o-spacing-md: 16px !default;
+$o-spacing-lg: 24px !default;
+$o-spacing-xl: 32px !default;
+
+// Typography
+$o-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$o-font-size-base: 14px !default;
+$o-font-size-sm: 12px !default;
+$o-font-size-lg: 16px !default;
+$o-font-weight-normal: 400 !default;
+$o-font-weight-medium: 500 !default;
+$o-font-weight-bold: 600 !default;
+
+// Sidebar
+$o-sidebar-width: 250px !default;
+$o-sidebar-bg: $o-bg-sidebar !default;
+$o-sidebar-item-hover: rgba(255, 255, 255, 0.1) !default;
+$o-sidebar-item-active: $o-brand-secondary !default;
+
+// Navbar
+$o-navbar-height: 56px !default;
+$o-navbar-bg: $o-bg-navbar !default;
+$o-navbar-text: $o-text-light !default;
+
+// Forms
+$o-form-label-color: $o-text-primary !default;
+$o-form-input-border: $o-border-color !default;
+$o-form-input-focus: $o-brand-secondary !default;
+
+// Buttons
+$o-btn-border-radius: $o-border-radius !default;
+$o-btn-padding-y: 8px !default;
+$o-btn-padding-x: 16px !default;
+
+// Kanban
+$o-kanban-card-bg: $o-bg-white !default;
+$o-kanban-card-shadow: $o-shadow-sm !default;
+$o-kanban-card-hover-shadow: $o-shadow-md !default;
